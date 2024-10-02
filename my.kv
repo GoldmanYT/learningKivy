@@ -1,0 +1,89 @@
+<Container>:
+    rows: 3
+
+    field: [[cell_1_1, cell_1_2, cell_1_3], [cell_2_1, cell_2_2, cell_2_3], [cell_3_1, cell_3_2, cell_3_3]]
+    label_info: label_info
+    next_move: 0
+
+    AnchorLayout:
+        size_hint_y: 0.1
+
+        Label:
+            id: label_info
+            text: 'Ходит: X'
+
+    GridLayout:
+        rows: 3
+        cols: 3
+
+        Button:
+            id: cell_1_1
+            cell: -1
+
+            on_release:
+                root.make_move(self)
+
+        Button:
+            id: cell_1_2
+            cell: -1
+
+            on_release:
+                root.make_move(self)
+
+        Button:
+            id: cell_1_3
+            cell: -1
+
+            on_release:
+                root.make_move(self)
+
+        Button:
+            id: cell_2_1
+            cell: -1
+
+            on_release:
+                root.make_move(self)
+
+        Button:
+            id: cell_2_2
+            cell: -1
+
+            on_release:
+                root.make_move(self)
+
+        Button:
+            id: cell_2_3
+            cell: -1
+
+            on_release:
+                root.make_move(self)
+
+        Button:
+            id: cell_3_1
+            cell: -1
+
+            on_release:
+                root.make_move(self)
+
+        Button:
+            id: cell_3_2
+            cell: -1
+
+            on_release:
+                root.make_move(self)
+
+        Button:
+            id: cell_3_3
+            cell: -1
+
+            on_release:
+                root.make_move(self)
+
+    AnchorLayout:
+        size_hint_y: 0.1
+
+        Button:
+            text: 'Новая игра'
+
+            on_release:
+                root.new_game()
